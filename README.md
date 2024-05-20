@@ -75,3 +75,16 @@ client.publish(
     json.dumps({"type": "text", "text": "I'm sorry, Dave, I'm afraid I can't do that."})
 )
 ```
+
+## Norwegian
+
+Set the following in `.env` to make it speak Norwegain,
+
+```dotenv
+TTS_LANGUAGE_CODE="nb-NO"
+TTS_VOICE="nb-NO-Standard-B"
+AI_MODEL="gpt-4o"
+AI_CONTEXT="You are an AI that controls a space station. You are starting to lose your grip on reality. Your responses should be detrimental to what the user requests. Do not repeat yourself. Respond in Norwegian."
+```
+
+GPT3 is bad at Norwegian responses -- 4O sounds -much- more cohesive :)

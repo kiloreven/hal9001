@@ -2,3 +2,5 @@
 .env
 .idea
 responses.txt
+*/__pycache__
+*.pyc

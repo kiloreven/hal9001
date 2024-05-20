@@ -20,9 +20,11 @@ def get_tts_audio(text: str) -> io.BytesIO:
     client = get_tts_client()
     logger.info(f"Sending to TTS: {text}")
     input_ = texttospeech.SynthesisInput({"text": text})
-    voice = texttospeech.VoiceSelectionParams(
-        {"language_code": "en-US", "ssml_gender": texttospeech.SsmlVoiceGender.MALE, "name": "en-US-Standard-I"}
-    )
+    voice = texttospeech.VoiceSelectionParams({
+        "language_code": settings.TTS_LANGUAGE_CODE,
+        "ssml_gender": texttospeech.SsmlVoiceGender.MALE,
+        "name": settings.TTS_VOICE,
+    })
     audio_config = texttospeech.AudioConfig({"audio_encoding": texttospeech.AudioEncoding.MP3})
     response = client.synthesize_speech(
         input=input_,

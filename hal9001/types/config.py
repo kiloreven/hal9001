@@ -15,6 +15,8 @@ class Settings(BaseSettings):
     LOOP_FILENAME: str = os.path.join(PROJECT_ROOT, "audio/space_drone.wav")
 
     GOOGLE_API_KEY: str
+    TTS_LANGUAGE_CODE: str = "en-US"  # "nb-NO"
+    TTS_VOICE: str = "en-US-Standard-I"  # "nb-NO-Standard-B"
 
     OPENAI_API_KEY: str
     AI_CONTEXT: str = (
